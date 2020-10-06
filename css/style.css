@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:30px;
+}
+table{
+ 
+    margin:0 auto;
+}
+th{
+    outline: 2px solid #c9c9c9;
+}
+td{
+    outline: 1px solid #e2e2e2;
+}
+th, td{
+    padding:7px;
+}
+
+tr:nth-child(odd) td{
+    background-color:#ecf1f5;
+}
+footer{
+    height:40px;
+  width:100%;
+    position: absolute;
+    bottom:0;
+}
+footer p{
+    text-align: center;
+}
