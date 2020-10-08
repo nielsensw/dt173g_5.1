@@ -1,13 +1,13 @@
 <?php
-// Kod skriver av Sally Nielsen | DT073G
+// Kod skriver av Sally Nielsen | DT173G
 class Course
 {
 
-    private $db;
-
-
+  private $db;
+ 
     function __construct()
     {
+
         /** Koppling till db */
         $this->db = new mysqli(DBHOST, DBUSER, DBPASS, DBDATABASE);
         if ($this->db->connect_errno > 0) {
@@ -15,12 +15,14 @@ class Course
         }
     }
 
-    public function addCourse($code, $name, $prog, $syllabus)
+    public function addCourse($code, $name, $progression, $syllabus)
     {
+      
         /** Lägger in kurs */
-        $sql = "INSERT INTO course(code, name, progression, syllabus)VALUES('$code', '$name', '$prog', '$syllabus')";
+        $sql = "INSERT INTO course(code, name, progression, syllabus)VALUES('$code', '$name', '$progression', '$syllabus')";
         $this->db->query($sql);
         return true;
+      
     }
     public function getCourses()
     {
